@@ -16,6 +16,20 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .font-serif { font-family: 'Playfair Display', serif; }
+
+        /* Smooth Marquee Keyframes */
+        @keyframes marquee {
+            0% { transform: translateX(0%); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: flex;
+            width: max-content;
+            animation: marquee 35s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
     </style>
 </head>
 <body class="bg-[#020617] text-slate-100 antialiased selection:bg-amber-500/30 selection:text-amber-200 min-h-screen relative overflow-x-hidden" x-data="{ mobileMenuOpen: false }">
@@ -240,108 +254,188 @@
         </div>
     </section>
 
-    <section id="secretariat" class="py-24 max-w-6xl mx-auto px-4">
-        <div class="text-center max-w-2xl mx-auto mb-16">
+    <section id="secretariat" class="py-24 overflow-hidden relative border-b border-blue-950/40">
+        <div class="text-center max-w-2xl mx-auto mb-16 px-4">
             <h2 class="text-3xl font-serif font-bold text-white mb-3">The Secretariat</h2>
             <p class="text-slate-400 text-xs tracking-wider uppercase">The executive team piloting operations for the Pune chapter.</p>
         </div>
 
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="secretariat-grid">
-            
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec1.JPG" alt="Nevin Mehta" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
-                </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Nevin Mehta</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Founder</p>
-            </div>
+        <div class="absolute left-0 top-36 bottom-0 w-20 md:w-40 bg-gradient-to-r from-[#020617] to-transparent z-10 pointer-events-none"></div>
+        <div class="absolute right-0 top-36 bottom-0 w-20 md:w-40 bg-gradient-to-l from-[#020617] to-transparent z-10 pointer-events-none"></div>
 
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec2.JPG" alt="Meet Ahuja" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
+        <div class="w-full relative flex">
+            <div class="animate-marquee gap-6 py-4 flex items-center">
+                
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec1.JPG" alt="Nevin Mehta" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Nevin Mehta</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Founder</p>
+                    </div>
                 </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Meet Ahuja</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Chief Advisor</p>
-            </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec2.JPG" alt="Meet Ahuja" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Meet Ahuja</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Chief Advisor</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec3.JPG" alt="Naqiah" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Naqiah</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Secretary General</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec4.JPG" alt="Advait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Advait</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Deputy Secretary General</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec5.JPG" alt="Esha" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Esha</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Director General</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec6.JPG" alt="Arya" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Arya</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Deputy Director General</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec7.JPG" alt="Anvi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Anvi</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Marketing</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec8.JPG" alt="Mrinali" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Mrinali</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of OC</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec9.JPG" alt="Rishit" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Rishit</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Hospitality</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec10.JPG" alt="Vedant" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Vedant</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Chief of Staff</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec11.JPG" alt="Ridhima" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Ridhima</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Design</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec12.JPG" alt="Suryansh" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Suryansh</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Convenor</p>
+                    </div>
+                </div>
 
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec3.JPG" alt="Naqiah" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec1.JPG" alt="Nevin Mehta" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Nevin Mehta</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Founder</p>
+                    </div>
                 </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Naqiah</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Secretary General</p>
-            </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec2.JPG" alt="Meet Ahuja" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Meet Ahuja</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Chief Advisor</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec3.JPG" alt="Naqiah" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Naqiah</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Secretary General</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec4.JPG" alt="Advait" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Advait</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Deputy Secretary General</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec5.JPG" alt="Esha" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Esha</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Director General</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec6.JPG" alt="Arya" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Arya</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Deputy Director General</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec7.JPG" alt="Anvi" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Anvi</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Marketing</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec8.JPG" alt="Mrinali" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Mrinali</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of OC</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec9.JPG" alt="Rishit" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Rishit</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Hospitality</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec10.JPG" alt="Vedant" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Vedant</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Chief of Staff</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec11.JPG" alt="Ridhima" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Ridhima</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Design</p>
+                    </div>
+                </div>
+                <div class="w-[220px] h-[280px] flex-shrink-0 bg-slate-900/40 backdrop-blur-sm border border-blue-950/60 rounded-xl overflow-hidden relative group transition-all duration-300 hover:-translate-y-2 hover:border-amber-500/40 hover:shadow-[0_10px_30px_rgba(245,158,11,0.1)]">
+                    <img src="sec12.JPG" alt="Suryansh" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" onerror="this.src='https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=400';">
+                    <div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex flex-col justify-end p-4">
+                        <h4 class="text-sm font-semibold text-white tracking-wide truncate">Suryansh</h4>
+                        <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Convenor</p>
+                    </div>
+                </div>
 
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec4.JPG" alt="Advait" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
-                </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Advait</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Deputy Secretary General</p>
-            </div>
-
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec5.JPG" alt="Esha" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
-                </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Esha</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Director General</p>
-            </div>
-
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec6.JPG" alt="Arya" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
-                </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Arya</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Deputy Director General</p>
-            </div>
-
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec7.JPG" alt="Anvi" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
-                </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Anvi</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Marketing</p>
-            </div>
-
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec8.JPG" alt="Mrinali" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
-                </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Mrinali</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of OC</p>
-            </div>
-
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec9.JPG" alt="Rishit" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
-                </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Rishit</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Hospitality</p>
-            </div>
-
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec10.JPG" alt="Vedant" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
-                </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Vedant</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Chief of Staff</p>
-            </div>
-
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec11.JPG" alt="Ridhima" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
-                </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Ridhima</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Design</p>
-            </div>
-
-            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
-                <div class="w-16 h-16 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 overflow-hidden shadow-inner flex items-center justify-center">
-                    <img src="sec12.JPG" alt="Suryansh" class="w-full h-full object-cover bg-slate-900" onerror="this.style.display='none'">
-                </div>
-                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Suryansh</h4>
-                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Convenor</p>
             </div>
         </div>
     </section>
