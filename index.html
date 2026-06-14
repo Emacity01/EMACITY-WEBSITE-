@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emacity Model United Nations 2026 | Pune Chapter</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-serif { font-family: 'Playfair Display', serif; }
+    </style>
+</head>
+<body class="bg-[#020617] text-slate-100 antialiased selection:bg-amber-500/30 selection:text-amber-200 min-h-screen relative overflow-x-hidden" x-data="{ mobileMenuOpen: false }">
+
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[120px] pointer-events-none z-0"></div>
+    <div class="absolute top-[1200px] right-1/4 w-[600px] h-[600px] bg-amber-900/5 rounded-full blur-[150px] pointer-events-none z-0"></div>
+    <div class="absolute bottom-[800px] left-10 w-[400px] h-[400px] bg-blue-900/10 rounded-full blur-[100px] pointer-events-none z-0"></div>
+
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#020617]/70 backdrop-blur-md border-b border-blue-950/40 px-6 py-4">
+        <div class="max-w-6xl mx-auto flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <div class="w-8 h-8 rounded-full bg-slate-900 border border-amber-500/40 flex items-center justify-center text-[9px] font-serif text-amber-400">EM</div>
+                <span class="font-serif tracking-widest text-sm font-bold text-slate-200">EMACITY MUN</span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-xs tracking-widest uppercase font-medium text-slate-400">
+                <a href="#about" class="hover:text-amber-400 transition-colors">About</a>
+                <a href="#committees" class="hover:text-amber-400 transition-colors">Committees</a>
+                <a href="#secretariat" class="hover:text-amber-400 transition-colors">Secretariat</a>
+                <a href="#media" class="hover:text-amber-400 transition-colors">Media</a>
+                <a href="#contact" class="hover:text-amber-400 transition-colors">Contact</a>
+            </div>
+            <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden text-slate-300 hover:text-white focus:outline-none">
+                <svg x-show="!mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                <svg x-show="mobileMenuOpen" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" style="display: none;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+            </button>
+        </div>
+    </nav>
+
+    <div x-show="mobileMenuOpen" 
+         x-transition:enter="transition ease-out duration-200"
+         x-transition:enter-start="opacity-0 -translate-y-2"
+         x-transition:enter-end="opacity-100 translate-y-0"
+         x-transition:leave="transition ease-in duration-150"
+         x-transition:leave-start="opacity-100 translate-y-0"
+         x-transition:leave-end="opacity-0 -translate-y-2"
+         class="fixed inset-x-0 top-[65px] z-40 bg-[#020617]/95 backdrop-blur-xl border-b border-blue-950/80 p-6 flex flex-col gap-4 text-center tracking-widest uppercase text-sm font-medium shadow-2xl" 
+         style="display: none;">
+        <a href="#about" @click="mobileMenuOpen = false" class="py-2 hover:text-amber-400">About</a>
+        <a href="#committees" @click="mobileMenuOpen = false" class="py-2 hover:text-amber-400">Committees</a>
+        <a href="#secretariat" @click="mobileMenuOpen = false" class="py-2 hover:text-amber-400">Secretariat</a>
+        <a href="#media" @click="mobileMenuOpen = false" class="py-2 hover:text-amber-400">Media</a>
+        <a href="#contact" @click="mobileMenuOpen = false" class="py-2 hover:text-amber-400">Contact</a>
+    </div>
+
+    <section class="relative h-screen flex items-center justify-center pt-16 border-b border-blue-950/40">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#020617] via-[#020617]/80 to-[#020617]/40"></div>
+            <div class="w-full h-full bg-slate-950 opacity-20 mix-blend-overlay pattern-grid-lg"></div>
+        </div>
+
+        <div class="relative z-10 max-w-5xl mx-auto px-4 text-center">
+            <div class="mb-8 relative inline-block group">
+                <div class="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-600 to-amber-500 opacity-20 blur-md transition duration-1000"></div>
+                <div class="relative w-32 h-32 md:w-36 md:h-36 rounded-full bg-slate-900/90 border border-amber-500/30 flex items-center justify-center p-4 shadow-2xl">
+                    <span class="text-[11px] text-amber-400 font-serif tracking-[0.2em] leading-relaxed text-center">EMACITY<br><span class="text-white font-sans text-[10px] tracking-widest font-bold">MUN</span></span>
+                </div>
+            </div>
+
+            <h1 class="text-4xl md:text-7xl font-serif tracking-tight font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-white via-slate-200 to-slate-400 mb-4">
+                EMACITY MODEL UNITED NATIONS
+            </h1>
+
+            <p class="text-amber-400 text-base md:text-xl font-light tracking-[0.25em] uppercase mb-12 max-w-2xl mx-auto">
+                “Certainty in Self. Leadership in Life.”
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 text-xs text-slate-300 font-medium tracking-wider mb-12 bg-blue-950/20 backdrop-blur-md border border-blue-900/30 px-6 py-3 rounded-xl sm:rounded-full w-max mx-auto">
+                <div class="flex items-center gap-2">
+                    <span class="text-blue-400">🛡️</span> <span>Pune Chapter 2026</span>
+                </div>
+                <div class="hidden sm:block h-4 w-px bg-blue-900/50"></div>
+                <div class="flex items-center gap-2">
+                    <span class="text-blue-400">📅</span> <span>16th–17th May 2026</span>
+                </div>
+                <div class="hidden sm:block h-4 w-px bg-blue-900/50"></div>
+                <div class="flex items-center gap-2">
+                    <span class="text-amber-500">📍</span> <span>Pune, India</span>
+                </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#committees" class="w-full sm:w-auto px-8 py-4 rounded-lg font-medium text-xs tracking-widest bg-gradient-to-r from-blue-700 to-blue-600 hover:from-blue-600 hover:to-blue-500 text-white shadow-lg border border-blue-500/20 transition-all hover:-translate-y-0.5 text-center">EXPLORE CONFERENCE</a>
+                <a href="#media" class="w-full sm:w-auto px-8 py-4 rounded-lg font-medium text-xs tracking-widest bg-slate-900/60 hover:bg-slate-900/90 text-amber-400 border border-amber-500/30 backdrop-blur-md transition-all hover:-translate-y-0.5 text-center">WATCH AFTERMOVIE</a>
+            </div>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#020617] to-transparent pointer-events-none"></div>
+    </section>
+
+    <section class="relative z-20 max-w-6xl mx-auto px-4 -mt-12">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 md:p-10 bg-slate-950/50 backdrop-blur-xl border border-blue-900/20 rounded-xl shadow-2xl">
+            <div class="text-center">
+                <div class="text-2xl md:text-4xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 mb-1">200+</div>
+                <div class="text-[10px] md:text-xs text-slate-400 tracking-widest uppercase">Delegates</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl md:text-4xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 mb-1">20+</div>
+                <div class="text-[10px] md:text-xs text-slate-400 tracking-widest uppercase">Schools & Colleges</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl md:text-4xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 mb-1">6</div>
+                <div class="text-[10px] md:text-xs text-slate-400 tracking-widest uppercase">Committees</div>
+            </div>
+            <div class="text-center">
+                <div class="text-2xl md:text-4xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-400 via-yellow-200 to-amber-500 mb-1">4</div>
+                <div class="text-[10px] md:text-xs text-slate-400 tracking-widest uppercase">Award Categories</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 max-w-6xl mx-auto px-4">
+        <div class="grid md:grid-cols-12 gap-12 items-start">
+            <div class="md:col-span-7 space-y-6">
+                <div class="flex items-center gap-2 text-blue-400 font-medium tracking-widest text-[10px] uppercase"><span>✓</span> <span>Our Philosophy</span></div>
+                <h2 class="text-3xl md:text-4xl font-serif font-bold text-white">About <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-200">Emacity</span></h2>
+                <p class="text-slate-300 leading-relaxed font-light text-sm md:text-base">
+                    Founded after more than 200 MUN experiences, Emacity Model United Nations was created with a simple belief: every delegate deserves an equal opportunity to learn, lead, and be heard. What began as an idea evolved into a platform dedicated to fairness, accessibility, confidence-building, and diplomacy.
+                </p>
+            </div>
+
+            <div class="md:col-span-5 p-6 rounded-xl bg-gradient-to-b from-blue-950/20 to-slate-950/40 backdrop-blur-md border border-blue-900/20 relative overflow-hidden shadow-xl">
+                <div class="flex items-center gap-3 mb-4 text-amber-400"><span>🎖️</span> <span class="text-[10px] uppercase tracking-widest font-bold">Founder Story</span></div>
+                <h3 class="text-lg font-serif text-white mb-2">Nevin Mehta</h3>
+                <p class="text-slate-400 text-xs leading-relaxed font-light">
+                    After attending over 200 MUNs, founder Nevin Mehta envisioned a conference built by delegates for delegates. What started as a simple idea became a PNG logo, then a vision, and ultimately a conference hosting hundreds of delegates.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="committees" class="py-24 bg-slate-950/20 border-y border-blue-950/40">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center max-w-2xl mx-auto mb-16">
+                <h2 class="text-3xl font-serif font-bold text-white mb-3">Committees of Assembly</h2>
+                <p class="text-slate-400 text-xs tracking-wider uppercase">Strategic operational tracks for global structural debate.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="p-6 rounded-xl bg-slate-900/30 backdrop-blur-md border border-blue-500/30 flex flex-col justify-between hover:border-blue-500/50 transition-colors">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm font-mono font-bold tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded">UNSC</span>
+                            <span class="text-slate-500 text-xs">🌐</span>
+                        </div>
+                        <h3 class="text-base font-serif font-bold text-slate-200 mb-2">United Nations Security Council</h3>
+                        <div class="h-px bg-slate-800/60 my-2"></div>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mt-2">
+                            <span class="text-blue-400 font-medium block mb-0.5 uppercase tracking-wider text-[9px]">Agenda:</span> International Peace and Security in the Red Sea and Bab el-Mandeb Strait
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-900/30 backdrop-blur-md border border-indigo-500/30 flex flex-col justify-between hover:border-indigo-500/50 transition-colors">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm font-mono font-bold tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded">UNHRC</span>
+                            <span class="text-slate-500 text-xs">👥</span>
+                        </div>
+                        <h3 class="text-base font-serif font-bold text-slate-200 mb-2">United Nations Human Rights Council</h3>
+                        <div class="h-px bg-slate-800/60 my-2"></div>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mt-2">
+                            <span class="text-blue-400 font-medium block mb-0.5 uppercase tracking-wider text-[9px]">Agenda:</span> Assessing the Human Rights Implications of Militarization and Maritime Tensions in the Strait of Hormuz
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-900/30 backdrop-blur-md border border-amber-500/30 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm font-mono font-bold tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded">AIPPM</span>
+                            <span class="text-slate-500 text-xs">🏛️</span>
+                        </div>
+                        <h3 class="text-base font-serif font-bold text-slate-200 mb-2">All India Political Parties Meet</h3>
+                        <div class="h-px bg-slate-800/60 my-2"></div>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mt-2">
+                            <span class="text-blue-400 font-medium block mb-0.5 uppercase tracking-wider text-[9px]">Agenda:</span> Government Accountability and Policy Direction in the 2026 Union Budget
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-900/30 backdrop-blur-md border border-pink-500/30 flex flex-col justify-between hover:border-pink-500/50 transition-colors">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm font-mono font-bold tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded">UNCSW</span>
+                            <span class="text-slate-500 text-xs">💻</span>
+                        </div>
+                        <h3 class="text-base font-serif font-bold text-slate-200 mb-2">UN Commission on the Status of Women</h3>
+                        <div class="h-px bg-slate-800/60 my-2"></div>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mt-2">
+                            <span class="text-blue-400 font-medium block mb-0.5 uppercase tracking-wider text-[9px]">Agenda:</span> Addressing the Role of Social Media Platforms in Online Gender-Based Violence
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-900/30 backdrop-blur-md border border-emerald-500/30 flex flex-col justify-between hover:border-emerald-500/50 transition-colors">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm font-mono font-bold tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded">IPC</span>
+                            <span class="text-slate-500 text-xs">📷</span>
+                        </div>
+                        <h3 class="text-base font-serif font-bold text-slate-200 mb-2">International Press Corps</h3>
+                        <div class="h-px bg-slate-800/60 my-2"></div>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mt-2">
+                            <span class="text-blue-400 font-medium block mb-0.5 uppercase tracking-wider text-[9px]">Agenda:</span> Journalism, Photography and Cartooning
+                        </p>
+                    </div>
+                </div>
+
+                <div class="p-6 rounded-xl bg-slate-900/30 backdrop-blur-md border border-red-500/30 flex flex-col justify-between hover:border-red-500/50 transition-colors">
+                    <div>
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="text-sm font-mono font-bold tracking-wider text-amber-400 bg-amber-500/10 px-2.5 py-0.5 rounded">FIA</span>
+                            <span class="text-slate-500 text-xs">🏎️</span>
+                        </div>
+                        <h3 class="text-base font-serif font-bold text-slate-200 mb-2">Fédération Internationale de l'Automobile</h3>
+                        <div class="h-px bg-slate-800/60 my-2"></div>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light mt-2">
+                            <span class="text-blue-400 font-medium block mb-0.5 uppercase tracking-wider text-[9px]">Agenda:</span> Driver Safety and Championship Dynamics in Sprint Races
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="secretariat" class="py-24 max-w-6xl mx-auto px-4">
+        <div class="text-center max-w-2xl mx-auto mb-16">
+            <h2 class="text-3xl font-serif font-bold text-white mb-3">The Secretariat</h2>
+            <p class="text-slate-400 text-xs tracking-wider uppercase">The executive team piloting operations for the Pune chapter.</p>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4" id="secretariat-grid">
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">NM</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Nevin Mehta</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Founder</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">MA</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Meet Ahuja</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Chief Advisor</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">NQ</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Naqiah</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Secretary General</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">AD</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Advait</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Deputy Secretary General</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">ES</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Esha</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Director General</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">AR</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Arya</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Deputy Director General</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">AN</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Anvi</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Marketing</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">DW</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Dhwani</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Delegate Affairs</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">MR</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Mrinali</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of OC</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">RS</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Rishit</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Hospitality</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">VD</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Vedant</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Chief of Staff</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">RD</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Ridhima</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Head of Design</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">SY</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Suryansh</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">Convenor</p>
+            </div>
+            <div class="p-4 rounded-lg bg-slate-950/30 border border-blue-950/50 text-center">
+                <div class="w-11 h-11 mx-auto rounded-full bg-blue-950/40 border border-blue-900/30 mb-2 flex items-center justify-center text-slate-400 text-xs font-semibold">KS</div>
+                <h4 class="text-xs font-medium text-slate-200 tracking-wide truncate">Kashvi</h4>
+                <p class="text-[10px] text-amber-400 font-mono uppercase tracking-widest mt-0.5">USG Design</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="media" class="py-24 bg-slate-950/20 border-y border-blue-950/40">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid lg:grid-cols-12 gap-12 items-start">
+                
+                <div class="lg:col-span-5 space-y-4">
+                    <div class="flex items-center gap-2 text-blue-400 font-medium tracking-widest text-[10px] uppercase"><span>📹</span> <span>Conference Broadcast</span></div>
+                    <h2 class="text-2xl font-serif font-bold text-white">Official Aftermovie</h2>
+                    <div class="w-full max-w-[330px] mx-auto lg:mx-0 rounded-xl overflow-hidden border border-blue-900/20 bg-black/40 shadow-xl">
+                        <iframe src="https://www.instagram.com/reel/DYhooDBhddb/embed" class="w-full h-[500px]" frameborder="0" scrolling="no" allowtransparency="true" allow="encrypted-media"></iframe>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-7 space-y-12">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2 text-blue-400 font-medium tracking-widest text-[10px] uppercase"><span>🖼️</span> <span>Visual Records</span></div>
+                        <h3 class="text-xl font-serif text-slate-200">Media Gallery Placeholders</h3>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="aspect-video bg-blue-950/20 border border-blue-900/10 rounded-lg flex items-center justify-center text-slate-600 text-[10px] font-mono select-none">[Image #1]</div>
+                            <div class="aspect-video bg-blue-950/20 border border-blue-900/10 rounded-lg flex items-center justify-center text-slate-600 text-[10px] font-mono select-none">[Image #2]</div>
+                            <div class="aspect-video bg-blue-950/20 border border-blue-900/10 rounded-lg flex items-center justify-center text-slate-600 text-[10px] font-mono select-none">[Image #3]</div>
+                            <div class="aspect-video bg-blue-950/20 border border-blue-900/10 rounded-lg flex items-center justify-center text-slate-600 text-[10px] font-mono select-none">[Image #4]</div>
+                            <div class="aspect-video bg-blue-950/20 border border-blue-900/10 rounded-lg flex items-center justify-center text-slate-600 text-[10px] font-mono select-none">[Image #5]</div>
+                            <div class="aspect-video bg-blue-950/20 border border-blue-900/10 rounded-lg flex items-center justify-center text-slate-600 text-[10px] font-mono select-none">[Image #6]</div>
+                        </div>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2 text-amber-400 font-medium tracking-widest text-[10px] uppercase"><span>🏆</span> <span>Merit Matrix</span></div>
+                        <h3 class="text-xl font-serif text-slate-200">Award Categories</h3>
+                        <div class="grid sm:grid-cols-2 gap-3">
+                            <div class="p-3.5 rounded-lg bg-slate-900/40 border border-blue-950/50 flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                                <span class="text-xs font-medium text-slate-300 tracking-wide">Best Delegate</span>
+                            </div>
+                            <div class="p-3.5 rounded-lg bg-slate-900/40 border border-blue-950/50 flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                                <span class="text-xs font-medium text-slate-300 tracking-wide">High Commendation</span>
+                            </div>
+                            <div class="p-3.5 rounded-lg bg-slate-900/40 border border-blue-950/50 flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                                <span class="text-xs font-medium text-slate-300 tracking-wide">Special Mention</span>
+                            </div>
+                            <div class="p-3.5 rounded-lg bg-slate-900/40 border border-blue-950/50 flex items-center gap-3">
+                                <div class="w-1.5 h-1.5 rounded-full bg-amber-500"></div>
+                                <span class="text-xs font-medium text-slate-300 tracking-wide">Verbal Mention</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="pt-24 pb-12 bg-[#020617] relative z-10">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-12 items-center border-b border-blue-950/60 pb-16">
+                <div>
+                    <h2 class="text-2xl font-serif font-bold text-white mb-3">Diplomatic Inquiries</h2>
+                    <p class="text-slate-400 text-xs leading-relaxed font-light max-w-sm">Contact the administration secretariat directly regarding delegation allocation quotas, structural registration, or logistics briefs.</p>
+                </div>
+                <div class="space-y-3">
+                    <a href="mailto:emacitymodelunitednations@gmail.com" class="flex items-center gap-4 p-4 rounded-xl bg-slate-900/20 border border-blue-950/50 hover:border-blue-700/40 transition-colors group">
+                        <div class="p-2.5 rounded-lg bg-blue-950/50 text-blue-400">✉️</div>
+                        <div>
+                            <span class="text-[9px] block text-slate-500 uppercase font-mono">Official Registry Desk</span>
+                            <span class="text-xs font-medium text-slate-300">emacitymodelunitednations@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/emacitymodelunitednations/" target="_blank" rel="noreferrer" class="flex items-center gap-4 p-4 rounded-xl bg-slate-900/20 border border-blue-950/50 hover:border-amber-500/30 transition-colors group">
+                        <div class="p-2.5 rounded-lg bg-blue-950/50 text-amber-400">📸</div>
+                        <div>
+                            <span class="text-[9px] block text-slate-500 uppercase font-mono">Communications Hub</span>
+                            <span class="text-xs font-medium text-slate-300">@emacitymodelunitednations</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-slate-500">
+                <div class="flex items-center gap-2">
+                    <span>🛡️</span>
+                    <span>© 2026 Emacity Model United Nations. All operational frameworks active.</span>
+                </div>
+                <div class="font-mono text-[9px] tracking-widest text-slate-600 uppercase">Pune Chapter · May 16-17, 2026</div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
