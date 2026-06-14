@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emacity Model United Nations</title>
+    <title>Emacity Model United Nations | Pune Chapter</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
-            theme {
+            theme: {
                 extend: {
                     fontFamily: {
                         serif: ['Cinzel', 'serif'],
@@ -27,10 +27,10 @@
         <div class="max-w-7xl mx-auto flex items-center justify-between">
             <div class="flex items-center gap-3">
                 <img src="logo.png" alt="Emacity MUN Logo" class="w-8 h-8 object-contain">
-                <span class="font-serif tracking-widest text-sm font-bold text-slate-200">EMACITY MUN</span>
+                <span class="font-serif tracking-widest text-xs md:text-sm font-bold text-slate-200">EMACITY MUN</span>
             </div>
             
-            <div class="hidden md:flex items-center gap-8 text-xs font-medium tracking-[0.2em] text-slate-400">
+            <div class="hidden md:flex items-center gap-8 text-[10px] font-medium tracking-[0.2em] text-slate-400">
                 <a href="#about" class="hover:text-amber-400 transition-colors">ABOUT</a>
                 <a href="#committees" class="hover:text-amber-400 transition-colors">COMMITTEES</a>
                 <a href="#gallery" class="hover:text-amber-400 transition-colors">GALLERY</a>
@@ -53,13 +53,51 @@
             </h1>
             <div class="w-16 h-[1px] bg-gradient-to-r from-transparent via-amber-500/50 to-transparent mb-8"></div>
             <p class="text-sm md:text-base text-slate-400 max-w-xl font-light tracking-wide leading-relaxed mb-10">
-                Join exceptional minds across the circuit to debate, negotiate, and resolve global crises. Your seat at the table awaits.
+                Join exceptional minds across the circuit to debate, negotiate, and resolve high-stakes global crises. Your seat at the table awaits.
             </p>
             <a href="#register" class="bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950 px-8 py-3.5 rounded font-bold text-xs tracking-[0.2em] shadow-xl shadow-amber-500/10 hover:scale-[1.02] transition-all">SECURE YOUR DELEGATION</a>
         </div>
     </section>
 
-    <section id="gallery" class="py-24 border-t border-blue-950/30 bg-[#020610]">
+    <section id="about" class="py-24 border-t border-blue-950/20 bg-[#030712]">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="font-serif text-2xl md:text-3xl tracking-wider text-slate-200 mb-4">THE CONFERENCE</h2>
+            <div class="w-12 h-0.5 bg-amber-500/40 mx-auto mb-8"></div>
+            <p class="text-slate-400 text-sm md:text-base leading-relaxed font-light mb-6">
+                Emacity Model United Nations has consistently established benchmarks for rigorous debate, flawless academic standard, and unparalleled hospitality. The Pune Chapter brings together visionary youth leaders to address intricate geo-political shifts.
+            </p>
+            <p class="text-amber-500/80 font-serif text-xs tracking-widest uppercase">May 16th & 17th, 2026</p>
+        </div>
+    </section>
+
+    <section id="committees" class="py-24 border-t border-blue-950/20 bg-[#020610]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col items-center text-center mb-16">
+                <h2 class="font-serif text-2xl md:text-3xl tracking-wider text-slate-200 mb-3">CONVENED COMMITTEES</h2>
+                <div class="w-12 h-0.5 bg-amber-500/40"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-b from-slate-900/40 to-slate-950/60 border border-blue-950/40 rounded-xl p-8 hover:border-amber-500/20 transition-all group">
+                    <div class="text-amber-500 font-serif text-lg mb-4 tracking-wide">UNGA</div>
+                    <div class="text-xs font-bold tracking-widest text-slate-400 mb-2">DISARMAMENT & INTERNATIONAL SECURITY</div>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">Evaluating systemic frameworks to mitigate multi-lateral border militarization and cybersecurity threats in sovereign territories.</p>
+                </div>
+                <div class="bg-gradient-to-b from-slate-900/40 to-slate-950/60 border border-blue-950/40 rounded-xl p-8 hover:border-amber-500/20 transition-all group">
+                    <div class="text-amber-500 font-serif text-lg mb-4 tracking-wide">UNSC</div>
+                    <div class="text-xs font-bold tracking-widest text-slate-400 mb-2">SECURITY COUNCIL</div>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">Addressing immediate flashpoints and managing peace-keeping mandates within disputed maritime shipping sectors.</p>
+                </div>
+                <div class="bg-gradient-to-b from-slate-900/40 to-slate-950/60 border border-blue-950/40 rounded-xl p-8 hover:border-amber-500/20 transition-all group">
+                    <div class="text-amber-500 font-serif text-lg mb-4 tracking-wide">AIPPM</div>
+                    <div class="text-xs font-bold tracking-widest text-slate-400 mb-2">ALL INDIA OPPOSITION PARTIES MEET</div>
+                    <p class="text-slate-500 text-xs font-light leading-relaxed">Deliberating structural center-state fiscal regulations and review of national internal security parameters.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="py-24 border-t border-blue-950/30 bg-[#030712]">
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col items-center text-center mb-16">
                 <h2 class="font-serif text-2xl md:text-3xl tracking-wider text-slate-200 mb-3">CONFERENCE GALLERY</h2>
@@ -86,6 +124,27 @@
                     <img src="photo6.JPG" alt="Closing Ceremony" class="aspect-video w-full object-cover rounded-md group-hover:scale-[1.03] transition-transform duration-500">
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section id="register" class="py-24 border-t border-blue-950/30 bg-[#020610] relative overflow-hidden">
+        <div class="max-w-md mx-auto px-6 text-center relative z-10">
+            <h2 class="font-serif text-2xl tracking-wider text-slate-200 mb-3">APPLY NOW</h2>
+            <p class="text-xs text-slate-400 tracking-wide font-light mb-8">Allotments are prioritized by date of application registration.</p>
+            
+            <form class="space-y-4 text-left" onsubmit="event.preventDefault(); alert('Registration system linked successfully.');">
+                <div>
+                    <label class="block text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2">Full Name</label>
+                    <input type="text" required class="w-full bg-slate-950/80 border border-blue-950/60 rounded px-4 py-3 text-sm focus:outline-none focus:border-amber-500/50 text-slate-200 transition-colors">
+                </div>
+                <div>
+                    <label class="block text-[10px] font-bold tracking-widest text-slate-400 uppercase mb-2">Institutional Affiliation</label>
+                    <input type="text" required class="w-full bg-slate-950/80 border border-blue-950/60 rounded px-4 py-3 text-sm focus:outline-none focus:border-amber-500/50 text-slate-200 transition-colors">
+                </div>
+                <button type="submit" class="w-full bg-gradient-to-r from-amber-600 to-amber-500 text-slate-950 py-3.5 rounded font-bold text-xs tracking-[0.2em] shadow-xl shadow-amber-500/10 hover:brightness-110 transition-all mt-6">
+                    SUBMIT REGISTRATION PORTAL
+                </button>
+            </form>
         </div>
     </section>
 
